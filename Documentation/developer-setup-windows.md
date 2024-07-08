@@ -15,13 +15,14 @@ Please see the [Developer Setup](developer-setup.md) page for an overview of the
 # Clone the git repos
 
 This can be set up with the following sequence of commands, on the console, starting in the `C:\Dev` directory:
-
+```bash
     git clone https://github.com/CesiumGS/cesium-unreal-samples.git
     cd cesium-unreal-samples
     mkdir Plugins
     cd Plugins
     git clone --recursive https://github.com/CesiumGS/cesium-unreal.git
-    
+```
+
 # Build cesium-native
 
 The cesium-native libraries and their dependencies use CMake and must be built separately from Cesium for Unreal. There are a number of ways to do this, depending on your preferred environment:
@@ -62,7 +63,6 @@ To build a "Release" build of cesium-native,
 
 This will generate the project file called `cesium-unreal-extern.sln` in the directory `C:\Dev\cesium-unreal-samples\Plugins\cesium-unreal\extern\build`. You can open this solution file in the Visual Studio IDE and compile as normal. To install cesium-native to the project - which is required for use with Cesium for Unreal - right-click on `INSTALL` in Solution Explorer, and choose Build. `INSTALL` may be found inside a folder called `CMakePredefinedTargets`. Use the Solution Configuration dropdown to change between the Debug and Release configurations.
 
-
 ## CMake command-line
 
 First, configure the CMake project in the `C:\Dev\cesium-unreal-samples\Plugins\cesium-unreal\extern` directory by following the instructions below.
@@ -81,9 +81,9 @@ You can also build the Release version entirely from the command-line:
 cmake --build build --config Release --target install
 ```
 Or the debug version:
-
+```bash
       cmake --build build --config Debug --target install
-
+```
 You can also build and install the debug version by using `Debug` or `RelWithDebInfo` instead of `Release`.
 
 # Create the Visual Studio project files for cesium-unreal-samples
