@@ -82,7 +82,7 @@ cmake --build build --config Release --target install
 ```
 Or the debug version:
 ```bash
-      cmake --build build --config Debug --target install
+cmake --build build --config Debug --target install
 ```
 You can also build and install the debug version by using `Debug` or `RelWithDebInfo` instead of `Release`.
 
