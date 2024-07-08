@@ -70,15 +70,16 @@ First, configure the CMake project in the `C:\Dev\cesium-unreal-samples\Plugins\
 
 To configure for Visual Studio 2022, open "x64 Native Tools Command Prompt for VS 2022" and execute the following command:
 
-      cmake -B build -S . -G "Visual Studio 17 2022" -A x64
-
+```bash
+cmake -B build -S . -G "Visual Studio 17 2022" -A x64
+```
 
 With either compiler, the commands above will generate the project file called `cesium-unreal-extern.sln` in the directory `C:\Dev\cesium-unreal-samples\Plugins\cesium-unreal\extern\build`. You can open this solution file in the Visual Studio IDE and compile as normal. To install cesium-native to the project - which is required for use with Cesium for Unreal - right-click on `INSTALL` in Solution Explorer, and choose Build. `INSTALL` may be found inside a folder called `CMakePredefinedTargets`. Use the Solution Configuration dropdown to change between the Debug and Release configurations.
 
 You can also build the Release version entirely from the command-line:
-
-      cmake --build build --config Release --target install
-
+```bash
+cmake --build build --config Release --target install
+```
 Or the debug version:
 
       cmake --build build --config Debug --target install
